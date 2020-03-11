@@ -144,7 +144,7 @@ class VerticalStackInCard extends HTMLElement {
             } else {
                 let ele = element.shadowRoot.querySelector('ha-card')
                 ele.style.boxShadow = 'none';
-                if (!(ele.config && ele.config.keep_background))
+                if (element.style['--keep-background'] !== 'true')
                     ele.style.background= 'transparent';
                 ele.style.borderRadius = '0';
             }
@@ -152,7 +152,7 @@ class VerticalStackInCard extends HTMLElement {
             if (typeof element.querySelector === 'function' && element.querySelector('ha-card')) {
                 let ele = element.querySelector('ha-card')
                 ele.style.boxShadow = 'none';
-                if (!(ele.config && ele.config.keep_background))
+                if (element.style['--keep-background'] !== 'true')
                     ele.style.background= 'transparent';
                 ele.style.borderRadius = '0';
             }
